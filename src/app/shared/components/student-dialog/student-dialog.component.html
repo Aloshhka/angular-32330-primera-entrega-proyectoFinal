@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Agregar Estudiante</h1>
+<div mat-dialog-content>
+    <form class="flex flex-column" [formGroup]="studentForm">
+        <div class="mb-2">
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input [formControl]="firstNameControl" matInput placeholder="Nombre">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="mb-2">
+            <mat-form-field appearance="fill">
+                <mat-label>Apellido</mat-label>
+                <input [formControl]="lastNameControl" matInput placeholder="Apellido">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="mb-2">
+            <mat-form-field appearance="fill">
+                <mat-label>DNI</mat-label>
+                <input [formControl]="dniControl" matInput placeholder="DIN">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="close()">Cancelar</button>
+    <button mat-button [mat-dialog-close]="studentForm.value" cdkFocusInitial>Guardar</button>
+</div>
